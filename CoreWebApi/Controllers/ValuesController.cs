@@ -20,7 +20,7 @@ namespace CoreWebApi.Controllers
         [HttpGet("{id}")]
         public string Get(int id)
         {
-            return "value";
+            return new PostgresAdapter().ReadValue(id).Name;
         }
 
         // POST api/values
